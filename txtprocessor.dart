@@ -22,9 +22,10 @@ class TxtProcessor {
 
   /*
    * #4. Comprobar si una letra está en una palabra.
+   * SOLUCIONADO por @cjimenecue
    */
   static bool isLetterInWord(String letter, String word) {
-    return false; // stub
+    return word.toLowerCase().contains(letter.toLowerCase());
   }
 
   /*
