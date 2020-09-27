@@ -1,5 +1,3 @@
-import 'dart:html';
-
 class Dictionary {
   /*
    * #1. Se puede tener:
