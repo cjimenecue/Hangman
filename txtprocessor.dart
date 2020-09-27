@@ -11,9 +11,13 @@ class TxtProcessor {
    * #3. Se está probando una nueva letra? está en la lista de intentos?
    * Si la letra no está en [a-z] o [A-Z] será falso.
    * No es sensitivo a mayúsculas y minúsculas, la 'a' y la 'A' son igual.
+   * SOLUCIONADO por @aetxabao
    */
   static bool isNewLetterInList(String letter, List<String> letterTrialList) {
-    return true; // stub
+    int c = letter.toUpperCase().codeUnitAt(0);
+    if ((c < "A".codeUnitAt(0)) || ("Z".codeUnitAt(0) < c)) return false;
+    var str = letterTrialList.join();
+    return !str.toUpperCase().contains(letter.toUpperCase());
   }
 
   /*
@@ -50,3 +54,15 @@ class TxtProcessor {
     return missedLetters;
   }
 }
+
+// // Para pruebas
+// void main() {
+//   // Pruebas #3
+//   var letterTrialList = ["a", "b", "i", "s", "t", "e", "u"];
+//   print(TxtProcessor.isNewLetterInList("a", letterTrialList));
+//   print(TxtProcessor.isNewLetterInList("A", letterTrialList));
+//   print(TxtProcessor.isNewLetterInList("5", letterTrialList));
+//   print(TxtProcessor.isNewLetterInList(" ", letterTrialList));
+//   print(TxtProcessor.isNewLetterInList("z", letterTrialList));
+//   print(TxtProcessor.isNewLetterInList("Z", letterTrialList));
+// }
