@@ -42,6 +42,7 @@ class Game {
    * #8. Hay que comprobar si se ha ganado y
    * en ese caso actualizar el estado
    * para que salga del game loop.
+   * SOLUCIONADO por @aetxabao
    */
   void update_game() {
     if (!TxtProcessor.isNewLetterInList(inputLetter, letterTrialList)) return;
@@ -52,6 +53,8 @@ class Game {
     gameStatus = (mistakeCounter < MAX_MISTAKES) ? Status.playing : Status.lost;
     missedLetters =
         TxtProcessor.missedLetters(keyword, letterTrialList); // ~ "a i t"
+    // Mejorable, pero debería funcionar (si no hay guiones bajos está solucionado)
+    if (!guessedLetters.contains("_")) gameStatus = Status.won;
   }
 
   void render_game() {
