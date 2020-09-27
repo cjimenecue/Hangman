@@ -1,3 +1,5 @@
+import 'dart:html';
+
 class Dictionary {
   /*
    * #1. Se puede tener:
@@ -9,6 +11,7 @@ class Dictionary {
    * La palabra devuelta debe ser aleatoria.
    */
   String makeRandomWord() {
-    return "bullseye"; // stub
+    //String palabra;
+    return "palabra";
   }
 }
