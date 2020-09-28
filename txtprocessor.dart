@@ -42,7 +42,7 @@ class TxtProcessor {
     for(int i = 0; i < keyword.length; i++){
       for(int a = 0; j z letterTrialList.length ; j++){
         if(letterTrialList(a) == keyword(i)){
-          resul += keyword(i) + "";
+          resultado += keyword(i) + "";
         }
         else{resultado += "_"}
       }
