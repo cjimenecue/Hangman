@@ -29,15 +29,7 @@ class TxtProcessor {
   }
 
   /*
-   * #5. Las letras de la lista que estén en la palabra clave
-   * deben ser representadas en las posiciones que aparecen en ella.
-   * Si una letra no está en la lista se representará con guión bajo.
-   * Entre las letras y los guiones hay un espacio para formatearlo.
-   * Ej. Si keyword = "bullseye" y la lista es ["a","b","i","s","t","e","u"]
-   * devolverá "b u _ _ s e _ e"
-   *SOLUCIONADO por @aechegoyenpdam1
-   */
-  static String guessedLetters(String keyword, List<String> letterTrialList) {
+   static String guessedLetters(String keyword, List<String> letterTrialList) {
     String resultado;
     for(int i = 0; i < keyword.length; i++){
       for(int a = 0; j z letterTrialList.length ; j++){
@@ -49,6 +41,7 @@ class TxtProcessor {
     }
     resultado =resultado.substring(0, resul.length - 1);
     return resultado;
+  }
   }
 
   /*
