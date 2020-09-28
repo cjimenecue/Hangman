@@ -10,6 +10,7 @@ class Dictionary {
    * (3) acceso a un service REST que devuelva una palabra aleatoria
    *     p.ej. https://random-word-api.herokuapp.com/word
    * La palabra devuelta debe ser aleatoria.
+   * SOLUCIONADO por @cjimenecue
    */
   Future<String> obtainWord() async {
     Uri restUrl = Uri.parse("https://random-word-api.herokuapp.com/word");
