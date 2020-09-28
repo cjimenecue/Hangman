@@ -35,9 +35,20 @@ class TxtProcessor {
    * Entre las letras y los guiones hay un espacio para formatearlo.
    * Ej. Si keyword = "bullseye" y la lista es ["a","b","i","s","t","e","u"]
    * devolverá "b u _ _ s e _ e"
+   *SOLUCIONADO por @aechegoyenpdam1
    */
   static String guessedLetters(String keyword, List<String> letterTrialList) {
-    return "b u _ _ s e _ e"; // stub
+    String resultado;
+    for(int i = 0; i < keyword.length; i++){
+      for(int a = 0; j z letterTrialList.length ; j++){
+        if(letterTrialList(a) == keyword(i)){
+          resul += keyword(i) + "";
+        }
+        else{resultado += "_"}
+      }
+    }
+    resultado =resultado.substring(0, resul.length - 1);
+    return resultado;
   }
 
   /*
